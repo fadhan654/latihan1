@@ -1,0 +1,8 @@
+
+menu: pizza
+price: 50
+quantity: 3
+total price: 150
+total money: 200000
+return: 199850
+
