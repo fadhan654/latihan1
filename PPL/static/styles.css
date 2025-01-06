@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/szoboszlai.jpg') no-repeat center center fixed; /* Gambar latar belakang */
+    background-size: cover; /* Menutupi seluruh area */
+    color: #fff; /* Warna teks putih untuk kontras */
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #FFD700;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(47, 79, 79, 0.8); /* Transparansi latar belakang */
+    border-radius: 10px;
+}
+
+.login-form {
+    background-color: rgba(30, 144, 255, 0.9); /* Transparansi untuk efek modern */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.login-form input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-form button {
+    width: 300px;
+    padding: 10px;
+    background-color: #FFD700;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.login-form button:hover {
+    background-color: #FF6347;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+/* Home Page */
+.home-container {
+    padding: 20px;
+    background: rgba(47, 79, 79, 0.8); /* Transparansi latar belakang */
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-btn {
+    background-color: #FF6347;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.logout-btn:hover {
+    background-color: #FF4500;
+}
+
+.matches {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.matches h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.match-list {
+    list-style: none;
+    padding: 0;
+}
+
+.match-item {
+    background: rgba(30, 144, 255, 0.8); /* Transparansi untuk efek modern */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.match-item:hover {
+    background-color: #4682B4;
+}
+
+.match {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-form, .logout-btn {
+        width: 90%; /* Full width on small screens */
+    }
+
+    .match-item {
+        font-size: 1em; /* Smaller font size on mobile */
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Football Streaming</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="home-container">
+        <header class="header">
+            <h1>Welcome, {{ username }}!</h1>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        </header>
+
+        <section class="matches">
+            <h2>Upcoming Premier League Matches</h2>
+            {% if upcoming_matches %}
+                <ul class="match-list">
+                    {% for match in upcoming_matches %}
+                        <li class="match-item">
+                            <span class="match">{{ match }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No upcoming matches available at the moment. Please try again later.</p>
+            {% endif %}
+        </section>
+
+        <section class="past-results">
+            <h2>Last Week's Results</h2>
+            {% if past_results %}
+                <ul class="result-list">
+                    {% for result in past_results %}
+                        <li class="result-item">
+                            <span class="result">{{ result }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No past results available at the moment. Please try again later.</p>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>
